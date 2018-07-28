@@ -50,7 +50,7 @@ def generate_cc_impl(ctx):
       arguments = arguments,
   )
 
-  return struct(files=set(out_files))
+  return struct(files=depset(out_files))
 
 generate_cc = rule(
     attrs = {
